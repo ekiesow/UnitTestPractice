@@ -14,6 +14,7 @@ class PracticeTest : public ::testing::Test
 		virtual void TearDown(){} //clean up after each test, (before destructor)
 };
 
+// Unit tests for isPalindrome function
 TEST(PracticeTest, is_simple_palindrome)
 {
     Practice obj;
@@ -47,4 +48,51 @@ TEST(PracticeTest, not_a_palindrome)
     Practice obj;
     bool actual = obj.isPalindrome("racedcar");
     ASSERT_FALSE(actual);
+}
+
+// Unit tests for sortDescenting funtion
+TEST(PracticeTest, sort_descending)
+{
+	Practice obj;
+	int first = 5, second = 3, third = 1;
+	int actual_first = 5, actual_second = 3, actual_third = 1;
+	obj.sortDescending(first, second, third);
+	ASSERT_EQ(actual_first, first);
+	ASSERT_EQ(actual_second, second);
+    ASSERT_EQ(actual_third, third);
+}
+
+TEST(PracticeTest, sort_ascending)
+{
+	Practice obj;
+	int first = 1, second = 3, third = 5;
+	int actual_first = 5, actual_second = 3, actual_third = 1;
+	obj.sortDescending(first, second, third);
+	ASSERT_EQ(actual_first, first);
+	ASSERT_EQ(actual_second, second);
+    ASSERT_EQ(actual_third, third);
+}
+
+
+TEST(PracticeTest, sort_second_third_swapped)
+{
+	Practice obj;
+	int first = 5, second = 1, third = 3;
+	int actual_first = 5, actual_second = 3, actual_third = 1;
+	obj.sortDescending(first, second, third);
+	ASSERT_EQ(actual_first, first);
+	ASSERT_EQ(actual_second, second);
+    ASSERT_EQ(actual_third, third);
+}
+
+
+TEST(PracticeTest, sort_first_second_swapped)
+{
+	Practice obj;
+	int first = 3, second = 5, third = 1;
+	int actual_first = 5, actual_second = 3, actual_third = 1;
+	obj.sortDescending(first, second, third);
+	ASSERT_EQ(actual_first, first);
+	ASSERT_EQ(actual_second, second);
+    ASSERT_EQ(actual_third, third);
 }
