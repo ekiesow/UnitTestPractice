@@ -36,11 +36,25 @@ TEST(PracticeTest, is_upper_lower_case_palindrome)
     ASSERT_TRUE(actual);
 }
 
+TEST(PracticeTest, alternate_upper_lower_case_palindrome)
+{
+    Practice obj;
+    bool actual = obj.isPalindrome("cDaBbAdC");
+    ASSERT_TRUE(actual);
+}
+
 TEST(PracticeTest, not_a_palindrome)
 {
     Practice obj;
     bool actual = obj.isPalindrome("racedcar");
     ASSERT_FALSE(actual);
+}
+
+TEST(PracticeTest, long_palindrome)
+{
+    Practice obj;
+    bool actual = obj.isPalindrome("neveroddoreven");
+    ASSERT_TRUE(actual);
 }
 
 // Unit tests for sortDescenting funtion
