@@ -36,13 +36,6 @@ TEST(PracticeTest, is_upper_lower_case_palindrome)
     ASSERT_TRUE(actual);
 }
 
-TEST(PracticeTest, palindrome_with_spaces)
-{
-    Practice obj;
-    bool actual = obj.isPalindrome("never odd or even");
-    ASSERT_TRUE(actual);
-}
-
 TEST(PracticeTest, not_a_palindrome)
 {
     Practice obj;
