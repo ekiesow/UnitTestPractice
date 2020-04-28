@@ -81,7 +81,7 @@ TEST(PracticeTest, sort_ascending)
 }
 
 
-TEST(PracticeTest, sort_second_third_swapped)
+TEST(PracticeTest, sort_descending_second_third_swapped)
 {
 	Practice obj;
 	int first = 5, second = 1, third = 3;
@@ -93,10 +93,32 @@ TEST(PracticeTest, sort_second_third_swapped)
 }
 
 
-TEST(PracticeTest, sort_first_second_swapped)
+TEST(PracticeTest, sort_descending_first_second_swapped)
 {
 	Practice obj;
 	int first = 3, second = 5, third = 1;
+	int actual_first = 5, actual_second = 3, actual_third = 1;
+	obj.sortDescending(first, second, third);
+	ASSERT_EQ(actual_first, first);
+	ASSERT_EQ(actual_second, second);
+    ASSERT_EQ(actual_third, third);
+}
+
+TEST(PracticeTest, sort_ascending_first_second_swapped)
+{
+	Practice obj;
+	int first = 3, second = 1, third = 5;
+	int actual_first = 5, actual_second = 3, actual_third = 1;
+	obj.sortDescending(first, second, third);
+	ASSERT_EQ(actual_first, first);
+	ASSERT_EQ(actual_second, second);
+    ASSERT_EQ(actual_third, third);
+}
+
+TEST(PracticeTest, sort_ascending_second_third_swapped)
+{
+	Practice obj;
+	int first = 1, second = 5, third = 3;
 	int actual_first = 5, actual_second = 3, actual_third = 1;
 	obj.sortDescending(first, second, third);
 	ASSERT_EQ(actual_first, first);
