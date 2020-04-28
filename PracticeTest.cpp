@@ -64,6 +64,12 @@ TEST(PracticeTest, empty_string)
     ASSERT_TRUE(actual);
 }
 
+TEST(PracticeTest, space)
+{
+    Practice obj;
+    bool actual = obj.isPalindrome(" ");
+    ASSERT_TRUE(actual);
+}
 // Unit tests for sortDescenting funtion
 TEST(PracticeTest, sort_descending)
 {
